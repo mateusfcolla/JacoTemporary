@@ -1,0 +1,34 @@
+<% include ../partials/headerSeminovos %>
+    
+    <div class="container d-flex justify-content-center">
+        <h1>Novo Seminovo</h1>
+        <a href="/maquinas/vermais">Voltar</a>
+    </div>
+    <div class="container">
+        <form action="/seminovos" method='POST' enctype="multipart/form-data"> 
+            <div class="form-group">
+                <label for="novoNome">Nome:</label>
+                <input type="text" name="novoNome" id="novoNome" class="form-control">
+            </div>
+            <div class="form-group">
+                    <label for="novoAno">Ano:</label>
+                    <input type="text" name="novoAno" id="novoAno" class="form-control">
+            </div>
+            <div class="form-group">
+                    <label for="novoPreco">Preço:</label>
+                    <input type="text" name="novoPreco" id="novoPreco" class="form-control">
+            </div>
+            <div class="form-group">
+                    <label for="novoDescricao">Descrição:</label>
+                    <textarea type="textarea" name="novoDescricao" id="novoDescricao" class="form-control" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="newImage">Imagem:</label>
+                <input type="file" accept="image/*" class="form-control-file" required name="newImage" id="newImage">
+            </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+    
+
+<% include ../partials/footer %>

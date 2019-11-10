@@ -1,0 +1,96 @@
+
+    <% include ../partials/headerSobre %>
+
+    <% if(userId){ %>
+        <div class="row d-flex justify-content-center text-center m-0">
+                <div class="col-12 p-0">
+                        <a href="/quemSomos/edit" class="btn btn-warning d-block">Edit</a>
+                </div>
+        </div>
+    <%}%>
+
+    <!-- CONTAINER -->
+    <div class="container-fluid">
+
+
+        
+        <!-- ARTIGO -->
+        <section>
+
+            <div class="jumbotron text-center" id="jumbotron-quemsomos" data-anime="bottom">
+
+                <h1 class="display-2 d-none d-lg-block"> <strong> <%=data[0]['jbtTitulo']%> </strong></h1>
+                <h1 class="display-5 d-lg-none"> <strong> <%=data[0]['jbtTitulo']%> </strong></h1>
+                <h2 class="display-5">- <i class="fas fa-users icone-quemsomos" id=""></i> -</h2>
+                <h2 class="display-5">- <%=data[0]['jbtDescricao']%> -</h2>
+
+            </div>
+            <div class="container">
+                <!--======INTRO===== -->
+                <div class="row">
+                    <div class="col-md-8" data-anime="left">
+                        <p class="py-2"><%=data[0]['starText1']%></p>
+                        <p class="py-2"><%=data[0]['starText2']%></p>
+                    </div>
+                    <div class="col-md-4" data-anime="right">
+                        <img class="quemsomos-imagem" src="https://www.jacolocadora.com.br/uploads/files/conteudo/1_capa/banner1.fw.png" alt="">
+                    </div>
+                </div>
+                <!-- ===== NOSSA MISSÃO ===== -->
+                <section id="nossa-missao-secao">
+                    <div class="row mt-4 d-flex justify-content-center my-5">
+                        <div class="col-12 d-flex justify-content-center" data-anime="top">
+                            <h3 class="display-5 texto-destaque pb-1"> <strong>- <%=data[0]['NMTitulo']%> -</strong></h3>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center px-5" data-anime="bottom">
+                            <p class="px-5 text-center"><i><%=data[0]['NMDescricao']%></i></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== COMPROMISSO COM OS CLIENTES ===== -->
+                <section class="compromisso">
+                    <div class="row ">
+                        <div class="col-4  d-none d-xl-block" data-anime="left">
+                            <img class="compromisso-imagem" src="https://www.jacolocadora.com.br/uploads/files/conteudo/1/IMG-20160527-WA0015.jpg" alt="">
+                        </div>
+                        <div class="col-sm-8 col-12" data-anime="right">
+                            <h3 class="display-5 texto-destaque mb-3 text-center text-md-left"> <strong>- <%=data[0]['BFBTitulo']%> </strong></h3>
+                            <p class="ml-3 pr-lg-5"><%=data[0]['BFBTDescricao']%></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== MENSAGEM DA DIREÇÃO DA EMPRESA ===== -->
+                <section class="compromisso">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center text-center text-md-left" data-anime="left">
+                            <h3 class="display-5 texto-destaque pb-3 text-center text-md-left"> <strong>- <%=data[0]['bottomTextitulo']%> -</strong></h3>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center px-5" data-anime="right">
+                            <p class="px-5 text-center direcao-texto">
+                                <i><%=data[0]['bottomText']%></i>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </section>
+
+        <% if(userId){ %>
+            <div class="row d-flex justify-content-center text-center m-0">
+                    <div class="col-12 p-0">
+                            <a href="/quemSomos/edit" class="btn btn-warning d-block">Edit</a>
+                    </div>
+            </div>
+        <%}%>
+
+
+    </div>
+
+    <% include ../partials/whats %>
+
+        
+
+<% include ../partials/footer %>

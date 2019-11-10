@@ -1,0 +1,66 @@
+   <% include ../partials/headerMaquinas %>
+    <div class="container-fluid">
+
+      <% if(userId){ %>
+        <div class="jumbotron d-flex justify-content-center">
+          <div class="row">
+            <div class="col-12">
+                <h1 class="display-4 texto-destaque text-center">
+                    Bem vindo Admin
+                  </h1>
+                  <div class="d-flex justify-content-center">
+                    <a href="/maquinas/nova" class="btn btn-lg btn-success m-5 text-center" id="nova-categoria">Adicionar nova categoria</a>
+          
+                  </div>
+            </div>
+          </div>
+        </div>
+      <%}%>
+      <div class="container mb-5">
+        <form action="/maquinas/editConteudo?_method=PUT" method="POST" >
+        <div class="row no-glutters d-flex justify-content-center align-content-center">
+          <h1> <input type="text" name="novoTitulo" value="<%=pagina[0].titulo%>" style="width:1000px"></h1>
+        </div>
+        <div class="row no-glutters d-flex justify-content-center align-content-center">
+            <p> <textarea name="novoConteudo" cols="50" rows="10"><%=pagina[0].conteudo%></textarea></p>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+      </form>
+
+        <div class="row">
+          
+          <% for(var i = 0; i<categorias.length; i++){ %>
+          
+            <div class="col-md-4 m-0">
+              <div class="card card-estilo">
+                <img src="<%= categorias[i]['imagem'] %>" class="card-img-top imagem-card">
+                <div class="card-body">
+                  <h5 class="card-title"><%= categorias[i]['nome'] %></h5>
+                  <p class="card-text"><%= categorias[i]['descricao'] %></p>
+                  <% let pathVerMaisTeste  = 'maquinas/vermais/'+ categorias[i]['nome']%>
+                  <a href="<%= pathVerMaisTeste %>" class="btn btn-success mr-3 mb-3">Ver mais</a>
+                  <% if(userId){ %>
+                    <% let pathDelete = '/maquinas/'+ categorias[i]['id_categoria']+'/delete' %>
+                    <a href="<%= pathDelete %>" class="btn btn-danger btn-sm">Deletar</a>
+                    <% let pathEdit = '/maquinas/'+ categorias[i]['id_categoria']+'/edit' %>
+                    <a href="<%= pathEdit %>" class="btn btn-warning btn-sm">Editar</a>
+                  <%}%>
+                  <% if(userId){ %>
+                  <%}%>
+                </div>
+
+              </div>
+            </div>
+          
+          <%}%>
+        </div>
+      </div>
+    </div>
+
+    <div class=" whats">
+        <a href="https://wa.me/48988054958">
+               <img target="_blank" src="/img/Sendusamessage.png" alt="">
+        </a>
+    </div>
+
+<% include ../partials/footer %>

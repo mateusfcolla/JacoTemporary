@@ -1,0 +1,25 @@
+<% include ../partials/headerMaquinas %>
+
+<div class="container d-flex justify-content-center">
+    <h1>Nova Categoria</h1>
+    <a href="/maquinas">Voltar</a>
+</div>
+<div class="container">
+    <form action="/maquinas" method='POST' enctype="multipart/form-data"> 
+        <div class="form-group">
+            <label for="newNome">Nome:</label>
+            <input type="text" name="newNome" id="newNome" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="newDescricao">Descrição:</label>
+            <textarea type="textarea" name="newDescricao" id="newDescricao" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="newImage">Imagem:</label>
+            <input type="file" accept="image/*" class="form-control-file" required name="newImage" id="newImage">
+        </div>
+    <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+</div>
+
+<% include ../partials/footer %>

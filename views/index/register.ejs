@@ -1,0 +1,59 @@
+<% include ../partials/header %>
+
+    <% include ../partials/navbar %>
+
+
+    <div class="container d-flex justify-content-center" id="mainform">
+        <div id="signupbox" class="">
+                                                       
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign Up</div>
+                        <div ><a id="signinlink" href="/">Sign In</a></div>
+                    </div> 
+                    <div class="panel-body" >
+                        <form class="form-horizontal" role="form" method="post" action="/register" onSubmit="return checkblank(this);">
+                            <% if (message.length > 0) { %>
+                                <div class="alert alert-success col-sm-12"><%= message %></div>
+                            <% } %>
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+                                
+            
+                            <div class="form-group">
+                                <label for="user_name" class="col-6">User Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="user_name" placeholder="User Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <!-- Button -->                                       
+                                <div class="col-8">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                    
+                                </div>
+                            </div>
+                           
+                            
+                            
+                            
+                        </form>
+                     </div>
+                </div>
+          
+            
+     </div>
+</div>
+
+
+
+<% include ../partials/footer %>

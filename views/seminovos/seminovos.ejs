@@ -1,0 +1,77 @@
+<% include ../partials/headerSeminovos %>
+
+
+  <% if(userId){ %>
+    <div class="jumbotron d-flex justify-content-center">
+       
+            <div class="row">
+              <div class="col-12">
+                  <h1 class="display-4 texto-destaque text-center">
+                      Bem vindo Admin
+                    </h1>
+                    <div class="d-flex justify-content-center">
+                      <a href="/seminovos/novo" class="btn btn-lg btn-success m-5 text-center" id="nova-categoria">Adicionar seminovo</a>
+                    </div>
+              </div>
+            </div>
+    
+      </div>
+    <%}%>
+    
+    <div class="container">
+      <br><br>
+        <div class="row d-flex justify-content-center" data-anime="left">
+          <h1 class="text-center texto-destaque"><%= pagina[0]['titulo'] %></h1>
+        </div>
+        <div class="row d-flex justify-content-center" data-anime="right">
+          <p class="text-center texto-destaque"> <%=pagina[0]['conteudo']%></p>
+        </div>
+        <% if(userId){ %>
+          <div class="d-flex justify-content-center">
+              <a href="/seminovos/editSeminovos" class=" btn btn-warning">Editar</a>
+          </div>
+        <%}%>
+      <br><br>
+        <% for(var i = 0; i<seminovos.length; i++){ %>
+          <div class="m-0 mx-xl-5 d-flex justify-content-center">
+            <div class="card mb-5 card-estilo" style="width: 1000px;" data-anime="left">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="<%=seminovos[i]['imagem']%>" class="card-img imagem-card">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body ">
+                          <div class="row">
+                              <div class="col-12 col-md-8 mb-3 mb-md-0">
+                                <h5 class="card-title text-left seminovo-titulo"><%= seminovos[i]['nome'] %></h5>
+                              </div>
+                              <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                  <p class="card-text seminovo-preco tex-left text-md-right"> <strong> R$:<%= seminovos[i]['preco'] %></strong></p>
+                              </div>
+                          </div>
+                          <p class="card-text"><strong>Ano: </strong> <%= seminovos[i]['ano'] %></p>
+                         
+                          <p class="card-text"><%= seminovos[i]['descricao'] %></p>
+                          <% if(userId){ %>
+                            <div class="d-flex justify-content-around">
+                                <a href="seminovos/<%= seminovos[i]['id_seminovo'] %>/delete" class="btn btn-danger btn-padrao px-4">Deletar</a>
+                                <a href="seminovos/<%= seminovos[i]['id_seminovo']%>/edit" class="btn btn-warning btn-padrao px-4">Editar</a>
+                            </div>
+                            
+                          <%}%>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+          
+        <%}%>
+        <div class="d-flex justify-content-center align-items-center container mb-3 " data-anime="bottom">
+            <p class="obras-traco mr-2">- </p><i class="fas fa-truck-monster icone-padrao"></i></i> <p class="obras-traco ml-2"> -</p>
+        </div>
+    </div>
+    <% include ../partials/whats %>
+
+
+
+<% include ../partials/footer %>

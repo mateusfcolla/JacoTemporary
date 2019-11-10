@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fde7c29e46.js"></script>
+
+    <!-- CSS ESTILO -->
+    <link rel="stylesheet" href="/estilos/style.css">
+
+    <!-- fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/vmnLsug.png"/>
+
+    <title>Jaco Locação - Maquinas</title>
+
+</head>
+ 
+<body>
+
+    <!-- NAVBAR -->
+<header>
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark" data-anime="top"> 
+                <a class="navbar-brand jaco-logo" href="/">  
+                    <img src="/img/logobrancopng.png" class="d-inline-block align-top logo-image">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto all-links d-flex align-items-center justify-content-around m-0">
+                        <li class="nav-item" id="link-1">
+                            <a class="nav-link cabecalho-links" href="/">Início</a>
+                        </li>
+                        <li class="nav-item" id="link-2">
+                            <a class="nav-link cabecalho-links" href="/quemSomos">Sobre</a>
+                        </li>
+                        <li class="nav-item active" id="link-3">
+                            <a class="nav-link cabecalho-links" href="/maquinas">Máquinas <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" id="link-4">
+                            <a class="nav-link cabecalho-links" href="/obras">Obras</a>
+                        </li>
+                        <li class="nav-item" id="link-5">
+                            <a class="nav-link cabecalho-links" href="/seminovos">Seminovos</a>
+                        </li>
+                        <li class="nav-item" id="link-6">
+                            <a class="nav-link cabecalho-links" href="/contato">Contato</a>
+                        </li>
+                        <% if(userId){ %>
+                            <li class="nav-item">
+                                <p class="nav-link cabecalho-links text-center text-success" id="logadocomo">logado como: <br>admin <br><a href="/logout">deslogar</a></p>
+                            </li>
+                        <%}%>
+                    </ul>
+                </div>
+        
+            </nav>
+    </header>
