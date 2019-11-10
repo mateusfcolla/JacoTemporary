@@ -1,0 +1,522 @@
+
+body{
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: 3px;
+    width: 100%;
+    margin: 0;
+}
+
+/* ANIMAÇÕES */
+    [data-anime] {
+        opacity: 0;
+        transition: .35s;
+    }
+
+    [data-anime="left"]{
+        transform: translate3d(-100px, 0, 0);
+    }
+
+    [data-anime="right"]{
+        transform: translate3d(+100px, 0, 0);
+    }
+
+    [data-anime="bottom"]{
+        transform: translate3d(0px, 50px, 0);
+    }
+
+    [data-anime="top"]{
+        transform: translate3d(0px, -100px, 0);
+    }
+
+    [data-anime="back"]{
+        transform: translate3d(0px, 0px, -500px);
+    }
+
+    [data-anime="mqn"]{
+        transform: translate3d(+50px, 0px, 0px);
+        opacity: 0;
+    }
+
+    [data-anime="obras"]{
+        transform: translate3d(0px, +200px, 0px);
+        transition: 2s;
+    }
+
+    [data-anime="basic"]{
+        background-image: url("");
+        transition: 1.2s;
+    }
+
+    [data-anime].animate{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    [data-anime="basic"].animate{
+        background-image: url("https://i.imgur.com/eSPcz6c.jpg");
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+/* FIM ANIMAÇÕES */
+
+.btn-padrao{
+    border-radius: 300px;
+}
+
+
+
+.container-categorias{
+    width: 1200px;
+
+}
+
+.imagem-card{
+    width: 100%;
+    height: 20rem;
+
+}
+
+.logo-image{
+    width: 200px;
+}
+
+.jaco-logo{
+    width: 200px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+#link-1{
+    margin-right: 20px;
+}
+
+#link-2{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#link-3{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* .dropdown-toggle::after {
+    display: none;
+} */
+
+
+
+#link-4{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#link-5{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#link-6{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.all-links{
+  
+    padding-right: 0px;
+ 
+}
+.mr-auto, .mx-auto {
+    margin-right: 0!important;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+
+#jumbotron-img{
+    /* position: relative; */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* background-image: url("https://i.imgur.com/1QZjVbj.png"); */
+    background-image: url("https://i.imgur.com/eSPcz6c.jpg");
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn-enviar{
+    width: 100%;
+}
+
+#jumbotron-text{
+    margin-top: 10%;
+    width: 100%;
+    background: rgba(204, 204, 204, 0.85);
+    
+}
+
+
+.container-fluid{
+    padding: 0;
+}
+
+#btn-maquinas{
+    padding: 5px 85px;
+    border-radius: 300px;
+
+}
+
+#destaques{
+    background-color: #f3f3f3;
+    font-size: 16px;
+}
+
+.whats{
+    padding: 10px;
+    position: fixed;
+    right: 360px;
+    bottom: 50px;
+    width: 15px;
+    height: 65px;
+    color: #222;
+    font-size: 40px;
+    z-index: 10000;
+}
+
+.whats:hover{
+    transition: 0.5s;
+    right: 375px;
+}
+
+.icones{
+    font-size: 120px;
+    padding-top: 35px;
+
+}
+
+/* #icone-precoesuporte{
+    margin-right: 50px;
+}
+ */
+/* #icone-quemsomos{
+    margin-left: 85px
+} */
+
+/* .destaques-texto{
+    padding: 0px 42px;
+
+} */
+
+/* .destaques-texto-meio{
+    padding: 0px 3px;
+} */
+
+
+.vl {
+    border-left: 1px solid rgb(197, 197, 197);
+    height: 250px;
+    left: 50%;
+    margin: 120px 0 80px 0;
+    top: 0;
+}
+
+.botao-saibamais{
+    padding: 2px 85px;
+    border-radius: 300px;
+    height: 35px;
+}
+
+#row-buttons{
+    height: 50px;
+}
+
+.row{
+    width: 100%;
+}
+
+
+
+.marcas-row{
+    width: 140px
+}
+
+#rodape{
+    background-color: #39464F;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+.regua-horizontal{
+    border: 1px solid rgb(43, 52, 59);
+    width: 800px
+}
+
+.icones-rodape{
+    font-size: 30px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color:white;
+}
+
+.links-destaques{
+    color: black
+}
+
+
+.btn-success:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #343a40;
+    border-color:#343a40; 
+}
+
+.cabecalho-links{
+    border-radius: 300px;
+    
+}
+
+.cabecalho-links:hover{
+    transition: 0.5s;
+    color: #fff;
+    background-color: #28a745;
+    border-color:  #28a745; 
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-left: .9rem;
+        padding-right: .9rem;
+    }
+}
+
+#jumbotron-quemsomos{
+    color: #002500;
+    background-color: white;
+    margin: 0;
+    padding-bottom: 32px;
+}
+
+.quemsomos-imagem{
+    width: 125%;
+    padding-top: 45px;
+}
+
+.texto-destaque{
+    color: #002500;
+}
+
+ .icone-quemsomos{
+    font-size: 75px
+} 
+
+.compromisso-imagem{
+    width: 360px;
+}
+
+.compromisso{
+    margin-top: 100px;
+    margin-bottom: 200px
+}
+
+.direcao-texto{
+    line-height: 30px
+}
+
+#nossa-missao-secao{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+
+/* ============================ dropdown menu */
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+/* 
+ <li class="nav-item dropdown" id="link-3">
+    <a class="nav-link cabecalho-links dropdown-toggle" id="navbarDropdown" href="maquinas.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Máquinas
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Plataformas Aéreas Articulares</a>
+        <a class="dropdown-item" href="#">Plataformas Aéreas Tesoura</a>
+        <a class="dropdown-item" href="#">Equipamentos Pesados</a>
+    </div>
+</li>
+*/
+
+
+/* PAGINA OBRAS */
+
+    /* INSTA-FEED */
+        .instaimg{
+            margin-bottom: 30px;
+        }
+        .instaimg:hover{
+            opacity: 0.8;
+            -moz-opacity: 0.8;
+            -webkit-opacity:0.8;
+        }
+    /* INSTA-FEED-END */
+
+    #jumbo-obras{
+        height: 300px;
+    }
+
+    #container-obras{
+        margin-bottom: 0px;
+    }
+
+/* PAGINA-OBRAS-END */
+
+/* PAGINA-MAQUINAS */
+
+    #nova-categoria{
+        padding: 5px 85px;
+        border-radius: 300px;
+    }
+
+
+
+/* estilo cards */
+    .card-estilo{
+        border: 0;
+        width: 23rem;
+        margin: 25px;
+    }
+
+    .card-title{
+        text-align: center;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+
+.icone-padrao{
+    font-size: 50px;
+}
+
+.obras-traco{
+    font-size: 80px;
+}
+
+.navbar-dark .navbar-nav
+ .active>.nav-link, .navbar-dark 
+ .navbar-nav .nav-link.active, .navbar-dark 
+ .navbar-nav .nav-link.show, .navbar-dark .navbar-nav 
+ .show>.nav-link{
+    color: #69c569;
+}
+
+
+/* @media (min-width: 1200px){
+    .navbar-expand-xl .navbar-collapse{
+        display: -ms-flexbox!important;
+        display: flex!important;
+        padding-bottom: 0;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        position: inherit;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: auto;
+    }
+} */
+
+
+#logadocomo{
+    font-size: 15px;
+}
+
+#logadocomo:hover{
+    font-size: 15px;
+    background-color: #343a40;
+}
+
+
+/* ========================== */
+/* ====ESTILO DAS TABELAS==== */
+/* ========================== */
+
+    tr{
+        font-size: 13px;
+        color: rgb(255, 255, 255);
+        border-color: inherit;
+        background-color: #2eaa34;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color:  #0c740c;
+    }
+    
+    table.maquina-tabela tr:hover td {
+        color: rgb(224, 217, 217);
+        background-color: #136100;
+        transition: 0.4s;
+    }
+    table.maquina-tabela tr:hover th {
+        color: rgb(224, 217, 217);
+        background-color: #136100;
+        transition: 0.4s;
+    }
+
+    
+
+
+    table {
+        border-collapse: collapse;
+        border-radius: 1em;
+        overflow: hidden;
+      }
+    
+
+
+/* ====ESTILO DAS TABELAS END==== */
+
+
+/* ======================= */
+/* ESTILO SEMINOVO */
+/* ======================= */
+
+      .seminovo-titulo{
+          font-size: 16px;
+      }
+
+      .seminovo-preco{
+          font-size: 15px;
+      }
+
+
+/*=============== ESTILO SEMINOVO END==========*/
+
+
+/* body{
+    font-size: 80%;
+} */
+
+

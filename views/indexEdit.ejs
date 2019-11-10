@@ -1,0 +1,87 @@
+<% include partials/header %>
+
+    <% include partials/navbar %>
+
+    <!-- CONTAINER -->
+    <form action="/?_method=PUT" method="post">
+        <div class="row d-flex justify-content-center m-0">
+                <div class="col-12 p-0">
+                        <button class="btn-warning btn d-block btn-enviar">Enviar</button>
+                </div>
+        </div>
+    <div class="container-fluid">
+        <!-- BANNER -->
+        <div class="jumbotron" id="jumbotron-img">
+            <div class="jumbotron mb-2 " id="jumbotron-text">
+                <h1 class="display-4 text-center my-4 my-md-2 texto-destaque"><input type="text" name="jbtTitulo" value="<%=data[0]['jbtTitulo']%>"></h1>
+                <h2 class="display-5 text-center mb-4 mb-md-3 texto-destaque"><textarea type ="text" name="jbtDescricao" rows="3"><%=data[0]['jbtDescricao']%></textarea></h2>
+                <h3 class="display-6 text-center mb-4 mb-md-3 texto-destaque">Veja nossas</h3>
+                <div class="d-flex justify-content-center">
+                    <a href="/maquinas" class="btn btn-lg btn-success mt-3 px-5" id="btn-maquinas">Máquinas</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTATOS -->
+        <div class="row text-center">
+            <div class="col-12 col-lg-6 mb-4 d-block d-lg-inline">
+                    <h2 class="display-6 "> <i class="fab fa-whatsapp"></i> <input type="text" name="telefone1" value="<%=data[0]['telefone1']%>"></h2>
+            </div>
+            <div class="col-12 col-lg-6 mb-4 d-block d-md-inline">
+                    <h2 class="display-6 "> <i class="fab fa-whatsapp"></i> <input type="text" name="telefone2" value="<%=data[0]['telefone2']%>"></h2>
+            </div>
+        </div>
+
+        <!-- DESTAQUES -->
+        <section id="destaques">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-lg-3 col-xl-4 text-center" id="icone-quemsomos">
+                    <i class="fas fa-users icones mb-3"></i>
+                    <h2 class="display-5 text-center mb-2"><input type="text" name="ITQSTitulo" value="<%=data[0]['ITQSTitulo']%>"></h2>
+                    <p class="destaques-texto mx-3 mx-sm-1"><textarea type="text" name="ITQSDescricao" rows="7"><%=data[0]['ITQSDescricao']%></textarea></p>
+                </div>
+                <div class="vl mr-5 d-none d-lg-block"></div>
+                <div class="col-12 col-lg-3 col-xl-3 text-center" id="local">
+                    <i class="fas fa-map-marker-alt icones mb-3"></i>
+                    <h2 class="display-5 text-center"><input type="text" name="ITLTitulo" value="<%=data[0]['ITLTitulo']%>"></h2>
+                    <p class="destaques-texto-meio mx-3 mx-sm-1"><textarea type="text" name="ITLDescricao" rows="7"><%=data[0]['ITLDescricao']%></textarea></p>
+                </div>
+                <div class="vl ml-5 d-none d-lg-block"></div>
+                <div class="col-12 col-lg-3 col-xl-4 text-center"  id="icone-precoesuporte">
+                    <i class="fas fa-dollar-sign icones mb-3"></i>
+                    <h2 class="display-5 text-center"><input type="text" name="ITPSTitulo" value="<%=data[0]['ITPSTitulo']%>"></h2>
+                    <p class="destaques-texto mx-3 mx-sm-1"><textarea type="text" name="ITPSDescricao" rows="7"><%=data[0]['ITPSDescricao']%></textarea>"></p>
+                </div>
+                <a href="/quemSomos" class="btn btn-lg btn-success mt-5 mb-5" id="botao-saibamais">Saiba mais</a>
+            </div>
+        </section>
+
+        <!-- MARCAS -->
+        <section id="marcas" class="mb-5">
+            <div class="row d-flex justify-content-center">
+                <h2 class="display-5 m-5 text-center"><textarea type="text" name="bottomText" rows="7"><%=data[0]['bottomText']%></textarea></h2>
+            </div>
+            <div class="row d-flex justify-content-center mb-4 mx-0">
+                <div class="col-6 col-sm-2 d-flex align-items-center  justify-content-center m-4">
+                    <img class="marcas-row"  src="/img/hyundai-logo.png" alt="">
+                </div>
+                <div class="col-6 col-sm-2 d-flex align-items-center    justify-content-center m-4">
+                    <img class="marcas-row"  src="/img/jcb-logo.jpg" alt="">
+                </div>
+                <div class="col-6 col-sm-2 d-flex align-items-center justify-content-center m-4">
+                    <img class="marcas-row"  src="/img/bobcat-logo.jpg" alt="">
+                </div>
+                <div class="col-6 col-sm-2 d-flex align-items-center  justify-content-center m-4">
+                    <img  class="marcas-row"  src="/img/cce-logo.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="row d-flex justify-content-center m-0">
+                <div class="col-12 p-0">
+                        <button class="btn-warning btn d-block btn-enviar">Enviar</button>
+                </div>
+        </div>
+    </form>
+<% include partials/footer %>

@@ -1,0 +1,97 @@
+<% include partials/header %>
+
+    <% include partials/navbar %>
+    <% if(userId){ %>
+        <div class="row d-flex justify-content-center m-0">
+                <div class="col-12 p-0">
+                    <a class="btn-warning btn d-block" href="/edit">Editar Página</a>
+                </div>
+        </div>
+    <%}%>
+
+    <!-- CONTAINER -->
+    <div class="container-fluid">
+        <!-- BANNER -->
+        <div class="jumbotron" id="jumbotron-img" data-anime="basic">
+            <div class="jumbotron mb-2 " data-anime="back" id="jumbotron-text">
+                <h1 class="display-4 text-center my-4 my-md-2 texto-destaque style" data-anime="top"><%=data[0]['jbtTitulo']%></h1>
+                <h2 class="display-5 text-center mb-4 mb-md-3 texto-destaque style" data-anime="top"><%=data[0]['jbtDescricao']%></h2>
+                <h3 class="display-6 text-center mb-4 mb-md-3 texto-destaque style" data-anime="bottom">Veja nossas</h3>
+                <div class="d-flex justify-content-center"  data-anime="bottom">
+                    <a href="/maquinas" class="btn btn-lg btn-success mt-3 px-5" id="btn-maquinas" data-anime="bottom">Máquinas</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTATOS -->
+        <div class="row text-center">
+            <div class="col-12 col-lg-6 mb-4 d-block d-lg-inline" data-anime="left">
+                <h2 class="display-6 "><i class="fas fa-phone-alt"></i> <%=data[0]['telefone1']%> </h2>
+            </div>
+            <div class="col-12 col-lg-6 mb-4 d-block d-md-inline" data-anime="right">
+                <h2 class="display-6 "> <i class="fab fa-whatsapp"></i> <%=data[0]['telefone2']%></h2>
+            </div>
+        </div>
+
+        <!-- DESTAQUES -->
+        <section id="destaques">
+            <div class="row d-flex justify-content-center" id="icones-row" >
+                <div class="row d-flex justify-content-center" id="icones-row-inside">
+                    <div class="col-12 col-lg-3 col-xl-4 text-center" data-anime="left" id="icone-quemsomos">
+                        <i class="fas fa-users icones mb-3"></i>
+                        <h2 class="display-5 text-center mb-2"><%=data[0]['ITQSTitulo']%></h2>
+                        <p class="destaques-texto p-0 px-xl-4 mx-3 mx-sm-1"><%=data[0]['ITQSDescricao']%></p>
+                        <div class="align-self-end">
+                            <a href="/quemSomos" class="btn btn-xl-lg btn-success botao-saibamais" >Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="vl mr-5 d-none d-lg-block"></div>
+                    <div class="col-12 col-lg-3 col-xl-3 text-center"  data-anime="top" id="local">
+                        <i class="fas fa-map-marker-alt mb-3 icones"></i>
+                        <h2 class="display-5 text-center"><%=data[0]['ITLTitulo']%></h2>
+                        <p class="destaques-texto-meio p-0 mx-3 mx-sm-1"><%=data[0]['ITLDescricao']%></p>
+                        <a href="https://goo.gl/maps/M5B5YWMhaZn78phF9" target="_blank" class="btn btn-lg btn-success botao-saibamais" >Onde estamos</a>
+                    </div>
+                    <div class="vl ml-5 d-none d-lg-block"></div>
+                    <div class="col-12 col-lg-3 col-xl-4 text-center pb-5"  data-anime="right"  id="icone-precoesuporte">
+                        <i class="fas fa-dollar-sign icones mb-3"></i>
+                        <h2 class="display-5 text-center"><%=data[0]['ITPSTitulo']%></h2>
+                        <p class="destaques-texto p-0 px-xl-4 mx-3 mx-sm-1 "><%=data[0]['ITPSDescricao']%></p>
+                        <a href="https://wa.me/5548988054958" target="_blank" class="btn btn-lg btn-success mt-2 botao-saibamais">Fale conosco</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- MARCAS -->
+        <section id="marcas" class="mb-5" data-anime="bottom">
+            <div class="row d-flex justify-content-center">
+                <h2 class="display-5 m-5 text-center"><%=data[0]['bottomText']%></h2>
+            </div>
+            <div class="row d-flex justify-content-center mb-4 mx-0">
+                <div class="col-6 col-sm-2 d-flex align-items-center  justify-content-center m-4" data-anime="left">
+                    <img class="marcas-row"  src="/img/hyundai-logo.png" alt="">
+                </div>
+                <div class="col-6 col-sm-2 d-flex align-items-center    justify-content-center m-4" data-anime="top">
+                    <img class="marcas-row"  src="/img/jcb-logo.jpg" alt="">
+                </div>
+                <div class="col-6 col-sm-2 d-flex align-items-center justify-content-center m-4" data-anime="top">
+                    <img class="marcas-row"  src="/img/bobcat-logo.jpg" alt="">
+                </div>
+                <div class="col-6 col-sm-2 d-flex align-items-center  justify-content-center m-4" data-anime="right">
+                    <img  class="marcas-row"  src="/img/cce-logo.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <% if(userId){ %>
+            <div class="row d-flex justify-content-center m-0">
+                    <div class="col-12 p-0">
+                        <a class="btn-warning btn d-block" href="/edit">Editar Página</a>
+                    </div>
+            </div>
+        <%}%>
+        
+        <% include partials/whats %>
+
+<% include partials/footer %>

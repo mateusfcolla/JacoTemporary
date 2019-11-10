@@ -1,0 +1,75 @@
+   <% include ../partials/headerMaquinas %>
+    <div class="container-fluid">
+
+      <% if(userId){ %>
+        <div class="jumbotron d-flex justify-content-center">
+          <div class="row">
+            <div class="col-12">
+                <h1 class="display-4 texto-destaque text-center">
+                  Bem vindo Admin
+                </h1>
+                <div class="d-flex justify-content-center">
+                  <a href="/maquinas/nova" class="btn btn-lg btn-success m-5 text-center" id="nova-categoria">Adicionar nova categoria</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      <%}%>
+
+      <div class="container mb-5">
+          <br><br>
+        <div class="row no-glutters d-flex justify-content-center align-content-center " data-anime="left">
+          <h1 class="text-center texto-destaque"><%=pagina[0].titulo%></h1>
+        </div>
+        <div class="row no-glutters d-flex justify-content-center align-content-center" data-anime="right">
+            <p class="text-center texto-destaque"><%=pagina[0].conteudo%></p>
+            <% if(userId){ %>
+            <a href="/maquinas/editConteudo" class="btn btn-warning">Editar</a>
+            <%}%>
+        </div>
+        <br><br>
+        <div class="row d-flex justify-content-around">
+          
+          <% for(var i = 0; i<categorias.length; i++){ %>
+          
+            <div class="col-12 col-md-6 col-xl-4 m-0">
+              <div class="card card-estilo" data-anime="mqn">
+                <img src="<%= categorias[i]['imagem'] %>" class="card-img-top imagem-card">
+                <div class="card-body">
+                  <h5 class="card-title"><%= categorias[i]['nome'] %></h5>
+                  <p class="card-text"><%= categorias[i]['descricao'] %></p>
+                  <div class="d-flex justify-content-center">
+                    <% let nomeCategoria = categorias[i]['nome'];%>
+                    <% let nomeCategoria2 = nomeCategoria.replace(/ /g, "-") %>
+                    <% let pathVerMaisTeste  = 'maquinas/vermais/'+ nomeCategoria2%>
+                    <a href="<%= pathVerMaisTeste %>" class="btn btn-success btn-padrao mr-3 mb-3" data-anime="bottom">Ver Maquinas nesta categoria</a>
+                  </div>
+
+                    <% if(userId){ %>
+                      <div class="d-flex justify-content-around">
+                        <% let pathDelete = '/maquinas/'+ categorias[i]['id_categoria']+'?_method=DELETE' %>
+                        <form action="<%=pathDelete%>" method="post" style="display: inline">
+                        <button class="btn btn-danger btn-padrao" type="submit">Deletar</button>
+                        </form>
+                        <% let pathEdit = '/maquinas/'+ categorias[i]['id_categoria']+'/edit' %>
+                        <a href="<%= pathEdit %>" class="btn btn-warning btn-padrao">Editar</a>
+                      </div>
+                    <%}%>
+                  
+                </div>
+
+              </div>
+            </div>
+          
+          <%}%>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center container mb-3 " data-anime="bottom">
+          <p class="obras-traco mr-2">- </p><i class="fas fa-truck-monster icone-padrao"></i></i> <p class="obras-traco ml-2"> -</p>
+      </div>
+    </div>
+
+    <% include ../partials/whats %>
+
+
+<% include ../partials/footer %>
